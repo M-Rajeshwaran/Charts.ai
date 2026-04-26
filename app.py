@@ -13,7 +13,7 @@ api_key = st.secrets.get("GOOGLE_API_KEY") or st.sidebar.text_input("Enter Gemin
 
 if api_key:
     genai.configure(api_key=api_key)
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    model = genai.GenerativeModel('gemini-1.5-flash-latest')
 else:
     st.warning("Please provide an API Key to start.")
 
